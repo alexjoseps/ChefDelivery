@@ -32,5 +32,4 @@ struct NavigationBar: View {
 
 #Preview(traits: .sizeThatFitsLayout) {
     NavigationBar()
-        .padding()
 }
