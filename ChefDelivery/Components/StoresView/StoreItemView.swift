@@ -9,11 +9,11 @@ import SwiftUI
 
 struct StoreItemView: View {
     
-    let store: OrderType
+    let store: StoreType
 
     var body: some View {
         HStack {
-            Image(store.image)
+            Image(store.logoImage)
                 .resizable()
                 .scaledToFit()
                 .frame(width: 50, height: 50)
@@ -26,5 +26,5 @@ struct StoreItemView: View {
 }
 
 #Preview(traits: .sizeThatFitsLayout) {
-    StoreItemView(store: OrderType(id: 1, name: "Carbron", image: "carbron-logo"))
+    StoreItemView(store: storeTypesMock[0])
 }

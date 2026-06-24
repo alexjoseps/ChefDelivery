@@ -14,11 +14,11 @@ struct StoreContainerView: View {
                 .font(.headline)
 
             VStack(alignment: .leading, spacing: 30) {
-                ForEach(storesMock) { mock in
+                ForEach(storeTypesMock) { store in
                     NavigationLink {
-                        StoreDetailView(store: mock)
+                        StoreDetailView(store: store)
                     } label: {
-                        StoreItemView(store: mock) }
+                        StoreItemView(store: store) }
                     }
             }
             .foregroundColor(.black)
