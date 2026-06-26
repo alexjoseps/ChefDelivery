@@ -60,7 +60,7 @@ struct StoreDetailView: View {
                                 .font(.subheadline)
                                 .foregroundStyle(Color.secondary)
                             
-                            Text("R$ \(product.price, specifier: "%.2f")")
+                            Text(product.priceAsBRL)
                         }
                         
                         Spacer()

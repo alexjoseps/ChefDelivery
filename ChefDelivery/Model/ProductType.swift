@@ -13,4 +13,8 @@ struct ProductType: Identifiable {
     let description: String
     let image: String
     let price: Double
+    
+    var priceAsBRL: String {
+        return price.toBRL()
+    }
 }
