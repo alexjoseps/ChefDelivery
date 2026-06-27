@@ -53,27 +53,35 @@ struct StoreDetailView: View {
                     .padding(10)
 
                 ForEach(store.products) { product in
-                    HStack {
-                        VStack(alignment: .leading, spacing: 8) {
-                            Text(product.name)
-                                .font(.headline)
+                    NavigationLink {
+                        ProductDetailView(product: product)
+                    } label: {
+                        HStack() {
+                            VStack(alignment: .leading, spacing: 8) {
+                                Text(product.name)
+                                    .font(.headline)
 
-                            Text(product.description)
-                                .font(.subheadline)
-                                .foregroundStyle(Color.secondary)
+                                Text(product.description)
+                                    .font(.subheadline)
+                                    .foregroundStyle(Color.secondary)
+                                
 
-                            Text(product.priceAsBRL)
+                                Text(product.priceAsBRL)
+                            }
+
+                            Spacer()
+
+                            Image(product.image)
+                                .resizable()
+                                .scaledToFit()
+                                .cornerRadius(12)
+                                .frame(width: 120, height: 120)
                         }
+                        .padding()
+                        .foregroundStyle(Color.black)
 
-                        Spacer()
-
-                        Image(product.image)
-                            .resizable()
-                            .scaledToFit()
-                            .cornerRadius(12)
-                            .frame(width: 120, height: 120)
+                        .multilineTextAlignment(.leading)
                     }
-                    .padding()
                 }
             }
             .navigationTitle(store.name)
