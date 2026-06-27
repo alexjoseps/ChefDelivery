@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct StoreItemView: View {
-    
+
     let store: StoreType
 
     var body: some View {
@@ -19,7 +19,7 @@ struct StoreItemView: View {
                 .frame(width: 50, height: 50)
             Text(store.name)
                 .font(.subheadline)
-            
+
             Spacer()
         }
     }

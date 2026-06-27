@@ -18,8 +18,9 @@ struct StoreContainerView: View {
                     NavigationLink {
                         StoreDetailView(store: store)
                     } label: {
-                        StoreItemView(store: store) }
+                        StoreItemView(store: store)
                     }
+                }
             }
             .foregroundColor(.black)
         }
